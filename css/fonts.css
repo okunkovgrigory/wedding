@@ -10,7 +10,6 @@
 
 @font-face {
     font-family: 'Patriciana';
-    font-weight: bold; /* Жирное начертание */
     src: url('../fonts/patriciana.eot');
     src: url('../fonts/patriciana.eot?#iefix') format('embedded-opentype'),
     url('../fonts/patriciana.woff2') format('woff2'),

@@ -22,7 +22,7 @@
     font-size: clamp(1.7rem, 3vw, 2rem);
     color: var(--accent);
     margin-bottom: 1rem;
-    font-weight: normal;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 
@@ -42,6 +42,7 @@
 
 .greeting-title {
     font-family: 'Patriciana', serif;
+    font-weight: bold;
     font-size: clamp(1.7rem, 3vw, 2rem);
     color: var(--accent);
     margin-bottom: 2rem;
@@ -49,6 +50,7 @@
 
 .greeting-text {
     font-size: 1.2rem;
+    font-weight: bold;
     max-width: 800px;
     margin: 0 auto 2rem;
     line-height: 1.8;
