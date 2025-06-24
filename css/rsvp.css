@@ -1,0 +1,308 @@
+.form-section {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    color: #202124;
+    margin: 0;
+    padding: 3rem 1rem;
+    background-image: url(../images/upl3045.png);
+    background-position: 50% 50%;
+    background-size: 401px;
+    background-color: rgba(255, 240, 230, 0.9);
+}
+
+.form-container {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 8px;
+    background: rgb(255, 236, 221, 0.95);
+}
+
+/* Стили полей ввода */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label:not(.checkbox-label):not(.radio-label) {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #3367d6;
+    outline: none;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Стили для радио-кнопок */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 28px;
+    min-height: 20px;
+}
+
+.radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-custom {
+    position: absolute;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 2px solid #dadce0;
+    border-radius: 50%;
+}
+
+.radio-label input:checked ~ .radio-custom {
+    border-color: #3367d6;
+}
+
+.radio-label input:checked ~ .radio-custom::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #3367d6;
+}
+
+/* Стили чекбоксов */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    min-height: 20px;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #ffffff;
+    border: 2px solid #dadce0;
+    border-radius: 4px;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom {
+    background-color: #3367d6;
+    border-color: #3367d6;
+}
+
+.checkbox-custom::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+    display: block;
+}
+
+/* Стили кнопок */
+.add-guest-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #3367d6;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: none;
+    border: none;
+    font-size: 15px;
+}
+
+.add-guest-btn span {
+    font-size: 18px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    background: var(--accent);
+    color: white !important;
+    font-family: 'Lobster', cursive;
+    font-size: clamp(0.75rem, 3vw, 0.875rem);
+    border-radius: 1.875rem;
+    text-decoration: none !important;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+}
+
+/* Hover: только если кнопка не в состоянии :active */
+.submit-btn:hover:not(:active):not(:focus-visible) {
+    background: rgba(141, 99, 84, 0.8);
+}
+
+/* Active: при клике */
+.submit-btn:active {
+    background: #b76aa2;
+}
+
+/* Focus: для клавиатуры */
+.submit-btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Убираем эффекты фокуса, если он был мышкой (но не клавиатурой) */
+.submit-btn:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Убираем залипание после фокуса, если курсор уходит */
+.submit-btn:focus:not(:hover):not(:active) {
+    background: var(--accent);
+}
+
+.submit-btn,
+.submit-btn:hover,
+.submit-btn:focus,
+.submit-btn:active,
+.submit-btn:visited {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/* Стили для формы гостей */
+.guest-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #dadce0;
+}
+
+.guest-form input {
+    flex: 1;
+    margin: 0;
+    background: #ffffff;
+}
+
+.remove-guest {
+    background: #ea4335;
+    color: #ffffff;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Секция опроса */
+.survey-section {
+    display: none;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #dadce0;
+}
+
+.survey-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .guest-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .remove-guest {
+        align-self: flex-end;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    textarea {
+        padding: 10px;
+    }
+}

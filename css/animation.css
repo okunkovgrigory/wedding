@@ -1,0 +1,39 @@
+@keyframes a {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes b {
+    0% {
+        margin-top: -25%
+    }
+    to {
+        margin-top: 0
+    }
+}
+
+@keyframes c {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes d {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2)
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1)
+    }
+}

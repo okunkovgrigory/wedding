@@ -1,0 +1,244 @@
+:root {
+    --bg: rgba(255, 236, 221, 0.95);
+    --text: #8c5e4c;
+    --accent: rgb(140, 94, 76, 0.95);
+    --transition: 0.3s ease;
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Patriciana', serif;
+    font-variant-ligatures: none;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.main-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Основной контейнер */
+.wedding-main-block {
+    flex: 1;
+    background-color: white;
+    align-items: center;
+    position: relative;
+    font-family: 'Patriciana', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.wedding-plate-decoration {
+    background-image: url('../images/upl3042.png'), url('../images/upl3048.png');
+    background-position: left center, right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+    animation: c 2s 1 cubic-bezier(.215, .61, .355, 1) 0s backwards;
+    position: absolute;
+    z-index: 0;
+}
+
+/* Контейнер для всего содержимого */
+.wedding-content-wrapper {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+    position: relative;
+    top: calc(54vh + 60px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: d 2.5s 1 cubic-bezier(.215, .61, .355, 1) .5s backwards
+}
+
+.together-forever-block,
+.invitation-block,
+.time-block,
+.waiting-block {
+    font-size: 12.70806pt;
+    font-family: Patriciana, serif;
+    color: rgb(0, 0, 0);
+    line-height: 1.75em;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.date-block {
+    font-size: 19.2774pt;
+    font-weight: bold;
+    font-family: Patriciana, serif;
+    color: rgb(0, 0, 0);
+    line-height: inherit;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.wedding-block {
+    font-size: 93.5161pt;
+    font-family: SaintAmour, serif;
+    color: rgb(0, 0, 0);
+    line-height: inherit;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+/* Таймер */
+/* Корневая обертка таймера */
+.countdown-root {
+    position: absolute;
+    bottom: 1rem; /* или 0, если нужно прямо у края */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    max-width: 100%;
+    backdrop-filter: blur(2px);
+    animation: a 3s 1 cubic-bezier(.215, .61, .355, 1) 2s backwards
+}
+
+/* Уменьшение масштаба всего блока */
+.countdown-textLine {
+    transform: scale(1);
+}
+
+/* Фон таймера */
+.countdown-bg {
+    padding: 15px 25px;
+}
+
+/* Внутренний блок со span'ами */
+.countdown-innerbox {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* Основной текст таймера */
+.countdown-content {
+    font-size: 10.2774pt;
+    font-family: Patriciana, serif;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0;
+    line-height: 1.75em;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.countdown-content span {
+    align-items: center;
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.countdown-content b {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .wedding-plate-decoration {
+        background-image: url('../images/upl3042.png');
+        background-position: center;
+        background-size: cover;
+        width: 90%;
+    }
+
+    .wedding-content-wrapper {
+        top: 66%;
+        left: 76%;
+    }
+
+    .together-forever-block,
+    .invitation-block,
+    .time-block,
+    .waiting-block {
+        font-size: clamp(0.7rem, 2.5vw, 1rem);
+        font-family: Patriciana, serif;
+        color: rgb(0, 0, 0);
+        line-height: 1.75em;
+        letter-spacing: 0;
+        text-align: center;
+    }
+
+    .date-block {
+        font-size: clamp(0.8rem, 3.5vw, 1rem);
+        font-weight: bold;
+        font-family: Patriciana, serif;
+        color: rgb(0, 0, 0);
+        line-height: inherit;
+        letter-spacing: 0;
+        text-align: center;
+    }
+
+    .wedding-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: clamp(3.5rem, 13vw, 8rem);
+        margin: 1rem 0;
+    }
+
+    .wedding-block .text {
+        display: block;
+        white-space: normal;
+        line-height: 0.6;
+    }
+
+    .countdown-textLine {
+        transform: scale(0.9);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .countdown-textLine {
+        transform: scale(0.8);
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+    .countdown-textLine {
+        transform: scale(0.7);
+    }
+}
+
+/* Landscape Small Mobile */
+@media (max-width: 576px) and (orientation: landscape) {
+
+}
+
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+    .countdown-textLine {
+        transform: scale(0.6);
+    }
+}

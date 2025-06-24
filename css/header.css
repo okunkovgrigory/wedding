@@ -1,0 +1,324 @@
+:root {
+    --bg: rgba(255, 236, 221, 0.95);
+    --text: #8c5e4c;
+    --accent: rgb(140, 94, 76, 0.95);
+    --transition: 0.3s ease;
+    --max-width: 1200px;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    animation: b 1.5s 1 cubic-bezier(.215,.61,.355,1) 2.5s backwards, a 2s 1 0s backwards;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    height: 60px;
+}
+
+.header__brand {
+    color: var(--text);
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: clamp(0.875rem, 3.5vw, 1.25rem);
+    transition: color var(--transition);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.header__brand:hover {
+    color: var(--accent);
+    text-decoration: none !important;
+}
+
+.header__toggle {
+    display: none;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 1001;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.icon-bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: var(--text);
+    margin: 5px auto;
+    transition: var(--transition);
+}
+
+/* Общие стили для иконок (видимы по умолчанию) */
+.menu-icon {
+    width: 1rem;
+    text-align: center;
+    transition: color var(--transition);
+}
+
+.header__menu .menu-icon {
+    display: none;
+}
+
+.header__calendar-btn .menu-icon {
+    display: inline-block;
+}
+
+.header__toggle.open .icon-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.header__toggle.open .icon-bar:nth-child(2) {
+    opacity: 0;
+}
+.header__toggle.open .icon-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+}
+
+.header__menu li a {
+    color: var(--text);
+    text-decoration: none !important;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    transition: all var(--transition);
+    white-space: nowrap;
+}
+
+.header__menu li a:hover .menu-icon,
+.header__calendar-btn:hover .menu-icon {
+    color: var(--accent);
+    text-decoration: none !important;
+}
+
+.header__calendar {
+    flex-shrink: 0;
+    width: auto;
+    max-width: 100%;
+}
+
+.header__calendar-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem !important;
+    background: var(--accent);
+    color: white !important;
+    font-family: 'Lobster', cursive;
+    font-size: clamp(0.75rem, 3vw, 0.875rem);
+    border: none;
+    border-radius: 1.875rem;
+    text-decoration: none !important;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+}
+
+/* Hover: только если кнопка не в состоянии :active */
+.header__calendar-btn:hover:not(:active):not(:focus-visible) {
+    background: rgba(141, 99, 84, 0.8);
+}
+
+/* Active: при клике */
+.header__calendar-btn:active {
+    background: #b76aa2;
+}
+
+/* Focus: для клавиатуры */
+.header__calendar-btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Убираем эффекты фокуса, если он был мышкой (но не клавиатурой) */
+.header__calendar-btn:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Убираем залипание после фокуса, если курсор уходит */
+.header__calendar-btn:focus:not(:hover):not(:active) {
+    background: var(--accent);
+}
+
+.header__calendar-btn,
+.header__calendar-btn:hover,
+.header__calendar-btn:focus,
+.header__calendar-btn:active,
+.header__calendar-btn:visited {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+
+@media (max-width: 992px) {
+
+    .header__container {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        height: 60px;
+    }
+
+    .header__brand {
+        order: 1;
+        flex-grow: 1;
+        max-width: 65%;
+    }
+
+    .header__toggle {
+        display: block;
+        order: 2;
+    }
+
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        background: var(--bg);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 5rem 1.5rem 2rem;
+        transition: right var(--transition);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .header__nav.open {
+        right: 0;
+    }
+
+    .header__menu {
+        flex-direction: column;
+        align-items: initial;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .header__menu li a {
+        padding-left: 1rem;
+        font-size: 1rem;
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+
+    /* Пункты меню (ссылки) */
+    .header__menu li a:focus,
+    .header__menu li a:active {
+        color: var(--text) !important;
+        background-color: transparent !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .header__menu .menu-icon {
+        display: inline-block;
+        margin-right: 0.75rem;
+        color: var(--text);
+    }
+
+    .header__calendar-btn {
+        display: flex;
+        align-items: center;
+        background: transparent !important;
+        color: var(--text) !important;
+        padding: 0.75rem !important;
+        border-radius: 0 !important;
+        border-top: 1px solid rgba(140, 94, 76, 0.2);
+        font-family: 'Patriciana', serif !important;
+        font-size: 1rem !important;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Кнопка календаря */
+    .header__calendar-btn:hover {
+        background: transparent !important;
+        color: var(--accent) !important;
+    }
+
+    .header__calendar-btn:focus,
+    .header__calendar-btn:active {
+        background-color: var(--accent) !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+    .header__calendar-btn {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header__brand {
+        max-width: 60%;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+    .header__brand {
+        max-width: 55%;
+    }
+
+    .header__calendar-btn {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Григорий & Оксана (19.07.2025)</title>
+    <meta name="description" content="Жених и Невеста приглашают вас на свадьбу">
+    <meta property="og:title" content="Приглашение на свадьбу - Григорий & Оксана (19.07.2025)">
+    <meta property="og:description" content="Жених и Невеста приглашают вас на свадьбу. Ваше приглашение:">
+    <meta property="og:type" content="website">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Bad+Script|Comfortaa|Kurale|Zen+Antique+Soft|Montserrat:900,800,600,500,300|Lobster|Lora:400i|Marck+Script|Marmelad|Merriweather|Neucha|Open+Sans+Condensed:300|Open+Sans:400,400i|PT+Sans+Narrow:400,700|Philosopher:400,400i|Play|Roboto+Condensed|Roboto+Slab|Roboto:100|Ubuntu:400,400i|Yeseva+One&amp;subset=cyrillic">
+
+
+    <!-- Кастомные стили -->
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main_screen.css">
+    <link rel="stylesheet" href="css/invitation.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <link rel="stylesheet" href="css/location.css">
+    <link rel="stylesheet" href="css/rsvp.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Кастомные шрифты -->
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <style>
+        /* Основные стили блока */
+        .block[elemplace="bgback"] {
+            background: rgb(202, 171, 148);
+        }
+
+        .element7[elemplace="bgbackpattern"] {
+            background-image: url('images/upl3045.png');
+            background-position: 50% 50%;
+            background-size: 401px;
+        }
+
+        .element8[elemplace="bgbacktext"] {
+            background: rgba(255, 236, 221, 0.7);
+        }
+
+        /* Стили для текстовых блоков */
+        .textLine[action="text1"] {
+            font-size: 51.3871pt;
+            font-family: SaintAmour;
+            color: rgb(122, 84, 49);
+            line-height: 1em;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+
+        .textLine[action="text2"] {
+            font-size: 11.9903pt;
+            font-family: 'Calme Extra';
+            color: rgb(0, 0, 0);
+            line-height: inherit;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+
+        .textLine[action="text4"] {
+            font-size: 41.9661pt;
+            font-family: SaintAmour;
+            color: rgb(122, 84, 49);
+            line-height: 1em;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+
+        .textLine[action="text8"],
+        .textLine[action="text10"] {
+            font-size: 42.8226pt;
+            font-family: SaintAmour;
+            color: rgb(122, 84, 49);
+            line-height: inherit;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+
+        .textLine[action="text11"],
+        .textLine[action="text13"],
+        .textLine[action="text15"],
+        .textLine[action="text17"],
+        .textLine[action="text20"] {
+            font-size: 14.5597pt;
+            line-height: inherit;
+            letter-spacing: 0em;
+            text-align: center;
+            font-family: 'Calme Extra';
+            color: rgb(122, 84, 49);
+        }
+
+        .textLine[action="text12"],
+        .textLine[action="text14"],
+        .textLine[action="text16"],
+        .textLine[action="text18"],
+        .textLine[action="text21"] {
+            font-size: 11.9903pt;
+            line-height: inherit;
+            letter-spacing: 0em;
+            text-align: center;
+            font-family: 'Calme Extra';
+            margin-left: -10px;
+            margin-right: -10px;
+            color: rgb(0, 0, 0) !important;
+        }
+
+        .textLine[action="text19"] {
+            font-size: 44.5355pt;
+            font-family: SaintAmour;
+            color: rgb(122, 84, 49);
+            line-height: inherit;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+
+        /* Стили для изображений */
+        .moveBox[type="img"] .textLine[action="text6"],
+        .moveBox[type="img"] .textLine[action="text7"],
+        .moveBox[type="img"] .textLine[action="text9"] {
+            float: left;
+        }
+
+        .moveBox[type="img"] .textLine[action="text6"] {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        .moveBox[type="img"] .textLine[action="text7"],
+        .moveBox[type="img"] .textLine[action="text9"] {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .BGPlace {
+            border-radius: 200px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2%;
+            width: 100%;
+        }
+
+        /* Стили для палитры */
+        #palitra .textLine[action="palitra"] .BGPlace {
+            padding: 3%;
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0);
+        }
+
+        #palitra .subTextLine[action="palitra_text"] {
+            font-size: 14pt;
+            padding: 5% 5% 0%;
+            font-family: 'Calme Extra';
+            color: rgb(0, 0, 0);
+        }
+
+        /* Стили для кнопки подтверждения */
+        .guestAgreement.guestAgree {
+            background: rgb(132, 137, 117);
+            border-radius: 5px;
+            font-size: 13.7032pt;
+            font-family: Lobster;
+            color: rgb(163, 146, 20);
+            letter-spacing: 0em;
+        }
+
+        .guestAgreement.guestAgree .subTextLine[action="agree_text"] {
+            font-size: 18pt;
+            font-family: 'Calme Extra';
+            color: rgb(255, 255, 255);
+        }
+
+        /* Стили для блока опроса */
+        .module.block[elemplace="bgopros"] {
+            background: rgb(188, 171, 143);
+            border: 0px solid rgb(255, 255, 255);
+        }
+
+        .module.block[elemplace="bgopros"] .corner {
+            border-bottom-color: rgb(188, 171, 143);
+        }
+
+        /* Позиционирование элементов */
+        .moveBox[style*="left: 0%; top: -10%;"],
+        .moveBox[style*="left: 0%; top: -9%;"],
+        .moveBox[style*="left: 0%; top: -6%;"],
+        .moveBox[style*="left: 0%; top: -8%;"] {
+            left: 0%;
+        }
+
+        .moveBox[style*="left: 0%; top: -10%;"] {
+            top: -10%;
+        }
+
+        .moveBox[style*="left: 0%; top: -9%;"] {
+            top: -9%;
+        }
+
+        .moveBox[style*="left: 0%; top: -6%;"] {
+            top: -6%;
+        }
+
+        .moveBox[style*="left: 0%; top: -8%;"] {
+            top: -8%;
+        }
+
+        .moveBox[style*="top:0%"] {
+            top: 0%;
+        }
+
+        .moveBox[style*="top:0%; left:0%;"] {
+            top: 0%;
+            left: 0%;
+        }
+
+        #palitra .moveBox.noMove {
+            top: 22%;
+            left: 2%;
+        }
+
+        /* Специфичные стили для текста комментария */
+        .subTextLine[action="agree_text"] {
+            font-size: 12pt;
+            font-family: Zing;
+            color: #808080;
+        }
+    </style>
+
+</head>
+<body>
+<!-- Главный экран -->
+<section class="main-screen" id="screen">
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="#mymain" class="header__brand">Григорий &amp; Оксана</a>
+
+            <button class="header__toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <nav class="header__nav" id="header-menu">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="#myinv"><i class="fa fa-envelope menu-icon"></i> Приглашение</a>
+                    </li>
+                    <li class="header__menu-item"><a href="#schedule"><i class="fa fa-clock-o menu-icon"></i> Расписание</a>
+                    </li>
+                    <li class="header__menu-item"><a href="#map"><i class="fa fa-map-marker menu-icon"></i> Карта</a>
+                    </li>
+                    <li class="header__menu-item"><a href="#textAgree"><i class="fa fa-check-circle menu-icon"></i>
+                        Подтвердить</a></li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__calendar-btn" id="smart-calendar-btn">
+                            <i class="fa fa-calendar-plus-o menu-icon"></i>
+                            <span>Добавить в календарь</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="wedding-main-block" id="mymain">
+        <div class="wedding-plate-decoration"></div>
+        <div class="wedding-content-wrapper">
+            <div class="together-forever-block">
+                <p class="text">ВМЕСТЕ<br>И НАВСЕГДА</p>
+            </div>
+            <div class="wedding-block">
+                <span class="text">Григорий</span>
+                <span class="text">и</span>
+                <span class="text">Оксана</span>
+            </div>
+            <div class="invitation-block"><p class="text">ПРИГЛАШАЕМ ВАС<br>НА НАШУ СВАДЬБУ</p></div>
+            <div class="date-block"><p class="text">19 ИЮЛЯ 2025</p></div>
+            <div class="time-block"><p class="text">СУББОТА, 15:00</p></div>
+            <div class="waiting-block"><p class="text">ЖДЕМ<br>ВАС!</p></div>
+        </div>
+        <counter class="countdown-root" id="count" module="count">
+            <div class="countdown-textLine" action="countdown">
+                <div class="countdown-bg">
+                    <div class="element_countdown">
+                        <div class="yet weddatecontent hide">
+                            <wed_yet>Мы женаты уже</wed_yet>
+                            <span><b><strong></strong><day>дней</day></b></span>
+                        </div>
+                        <div class="now weddatecontent hide">
+                            <wed_now>У нас сегодня свадьба!</wed_now>
+                        </div>
+                        <div class="count weddatecontent">
+                            <div class="countdown-innerbox">
+                                <div class="countdown countdown-content" action="countdowntext">
+                                    <span id="countdown-weeks"><b>04</b><br><week>недель</week></span>
+                                    <span id="countdown-days"><b>04</b><br><day>дней</day></span>
+                                    <span id="countdown-hours"><b>16</b><br><hour>часов</hour></span>
+                                    <span id="countdown-minutes"><b>47</b><br><minute>минут</minute></span>
+                                    <span id="countdown-seconds"><b>14</b><br><second>секунд</second></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </counter>
+    </main>
+</section>
+<!-- Свадебное приглашение -->
+<section class="invitation-section">
+    <div class="invitation-container">
+        <!-- Приветственный блок -->
+        <div class="greeting-block">
+            <h1 class="greeting-title">Дорогой гость!</h1>
+            <p class="greeting-text">
+                Мы рады сообщить Вам, что состоится самое главное торжество в нашей жизни - день
+                нашей свадьбы! Приглашаем Вас разделить с нами радость этого незабываемого дня.
+            </p>
+
+            <div class="divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">✽</div>
+                <div class="divider-line"></div>
+            </div>
+        </div>
+
+        <!-- Love story -->
+        <div class="love-story">
+            <h2 class="love-story-title">Наша история</h2>
+            <p class="love-story-text">
+                Там, где посеяна любовь, растёт радость! Наша история началась... [ваш текст о знакомстве и отношениях]
+            </p>
+        </div>
+
+        <!-- Фотографии жениха и невесты -->
+        <div class="couple-photos">
+            <div class="couple-photo">
+                <div class="photo-frame">
+                    <img src="images/DSC_3373.JPG" alt="Молодожёны">
+                </div>
+            </div>
+        </div>
+
+        <!-- Информационные блоки -->
+        <div class="info-blocks">
+            <!-- Меню -->
+            <div class="info-block">
+                <h2 class="info-title">Меню</h2>
+                <p class="info-text">
+                    Меню разнообразно, поэтому сообщите нам заранее, если у вас есть какие-либо
+                    предпочтения или диетические ограничения. После подтверждения вы сможете пройти
+                    опрос о своих вкусовых предпочтениях и напитках.
+                </p>
+            </div>
+
+            <!-- Подарки -->
+            <div class="info-block">
+                <h2 class="info-title">Пожелания по подаркам</h2>
+                <p class="info-text">
+                    Ваше присутствие в день нашей свадьбы - самый значимый подарок для нас!<br><br>
+                    Мы понимаем, что дарить цветы на свадьбу - это традиция, но мы не сможем насладиться их
+                    красотой в полной мере. Будем рады любой другой альтернативе (вино или в денежном эквиваленте).
+                </p>
+            </div>
+
+            <!-- Дресс-код -->
+            <div class="info-block">
+                <h2 class="info-title">Дресс-код</h2>
+                <p class="info-text">
+                    Будем благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры:
+                    [описание цветовой гаммы]
+                </p>
+            </div>
+
+            <!-- Примечание -->
+            <div class="info-block">
+                <h2 class="info-title">Примечание</h2>
+                <p class="info-text">
+                    Будем благодарны, если вы воздержитесь от криков "Горько" на празднике, ведь поцелуй
+                    — это знак выражения чувств, он не может быть по заказу.
+                </p>
+            </div>
+
+            <!-- Подтверждение -->
+            <div class="info-block">
+                <h2 class="info-title">Подтверждение</h2>
+                <p class="info-text">
+                    Пожалуйста подтвердите свое присутствие до 01.01.2025
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Свадебное расписание -->
+<section class="wedding-schedule" id="schedule">
+    <header>
+        <h2>Свадебное расписание</h2>
+    </header>
+    <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon">✽</div>
+        <div class="divider-line"></div>
+    </div>
+    <article class="schedule-content">
+        <ul class="schedule-list">
+            <li>
+                <time datetime="2025-07-19T14:30">14:30</time>
+                — Сбор гостей, welcome-зона, фотосессия
+            </li>
+            <li>
+                <time datetime="2025-07-19T15:00">15:00</time>
+                — Торжественная церемония регистрации
+            </li>
+            <li>
+                <time datetime="2025-07-19T16:00">16:00</time>
+                — Фуршет, развлекательная программа, конкурсы
+            </li>
+            <li>
+                <time datetime="2025-07-19T18:00">18:00</time>
+                — Праздничный ужин
+            </li>
+            <li>
+                <time datetime="2025-07-19T20:00">20:00</time>
+                — Первый танец, дискотека
+            </li>
+            <li>
+                <time datetime="2025-07-19T22:00">22:00</time>
+                — Торт и финал вечера
+            </li>
+        </ul>
+    </article>
+</section>
+<!-- RSVP Section -->
+<section class="form-section">
+    <div class="form-container">
+        <h1>Подтвердите участие</h1>
+
+        <form id="rsvpForm" action="YOUR_GOOGLE_FORM_URL" method="POST">
+            <!-- Основной гость -->
+            <div class="form-group">
+                <label for="mainGuest">Имя и Фамилия*</label>
+                <input type="text" id="mainGuest" name="entry.1234567890" required>
+            </div>
+
+            <!-- Дополнительные гости -->
+            <div id="additionalGuests"></div>
+
+            <div class="add-guest-btn" id="addGuestBtn">
+                <span>+</span> Добавить гостя
+            </div>
+
+            <!-- Телефон -->
+            <div class="form-group">
+                <label for="phone">Номер телефона*</label>
+                <input type="tel" id="phone" name="entry.9876543210" required>
+            </div>
+
+            <!-- Присутствие -->
+            <div class="form-group">
+                <label>Вы придёте?*</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="entry.5555555555" value="С радостью приду" required>
+                        <span class="radio-custom"></span>
+                        <span class="radio-text">С радостью приду</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="entry.5555555555" value="К сожалению, не смогу">
+                        <span class="radio-custom"></span>
+                        <span class="radio-text">К сожалению, не смогу</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Опрос (показывается, если "Приду") -->
+            <div id="surveySection" class="survey-section">
+                <h2>Дополнительная информация</h2>
+                <div id="surveyQuestions"></div>
+            </div>
+
+            <!-- Поздравление -->
+            <div class="form-group">
+                <label for="message">Ваше поздравление или комментарий</label>
+                <textarea id="message" name="entry.4444444444" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Подтвердить</button>
+        </form>
+    </div>
+</section>
+<!-- Как добраться -->
+<section class="location-section" id="location">
+    <div class="container">
+        <h2 class="section-title">Как добраться</h2>
+
+        <div class="divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">✽</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <div class="location-card">
+            <div class="location-info">
+                <div class="location-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="location-details">
+                    <h3 class="restaurant-name">Ресторан "Портофино Подрезово"</h3>
+                    <p class="restaurant-address">Прибрежная ул., 19, Подрезово, Московская обл.</p>
+                </div>
+            </div>
+
+            <div class="transport-options">
+                <div class="transport-item">
+                    <div class="transport-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="transport-details">
+                        <h4>На автомобиле</h4>
+                        <p>~40 минут от МКАД по Ленинградскому шоссе</p>
+                        <a href="https://yandex.ru/maps/-/CDqQjJg3" class="map-link" target="_blank">Маршрут на
+                            Яндекс.Картах</a>
+                    </div>
+                </div>
+
+                <div class="transport-item">
+                    <div class="transport-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <div class="transport-details">
+                        <h4>На электричке</h4>
+                        <p>От Ленинградского вокзала до ст. "Подрезково" (~35 мин), затем такси 5 мин</p>
+                    </div>
+                </div>
+
+                <div class="transport-item">
+                    <div class="transport-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="transport-details">
+                        <h4>На автобусе</h4>
+                        <p>№ 440 от м. Речной вокзал до ост. "Подрезково" (~50 мин), затем пешком 10 мин</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=37.712367%2C55.974249&z=16&pt=37.712367,55.974249,pm2rdm"
+                        width="100%"
+                        height="400"
+                        class="map-iframe"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Контакты -->
+<section class="wedding-contacts">
+    <div class="elegant-container">
+        <h2 class="section-title">Мы будем рады видеть вас</h2>
+
+        <div class="divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">✽</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <div class="contact-cards">
+            <!-- Telegram карточка -->
+            <div class="contact-card telegram-card">
+                <div class="icon-wrapper">
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+                <h3>Наш Telegram-канал</h3>
+                <p>Присоединяйтесь для обновлений и общения</p>
+                <a href="https://t.me/+3b4sSrmXIBc4NzJi" class="elegant-btn" target="_blank">
+                    Перейти <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- QR код карточка -->
+            <div class="contact-card qr-card">
+                <div class="qr-wrapper">
+                    <img src="images/qr_code_tg.png" alt="QR код для Telegram">
+                    <div class="qr-border"></div>
+                </div>
+                <p class="qr-hint">Или отсканируйте QR-код</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Футер -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="hashtag">#GrigoriiOksana</div>
+            <p class="social-links">С любовью, <br>Григорий&nbsp;&amp;&nbsp;Оксана</p>
+        </div>
+    </div>
+</footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/rsvp.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="js/ymaps.js"></script>
+</body>
+</html>

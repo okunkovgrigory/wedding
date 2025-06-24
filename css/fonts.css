@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'SaintAmour';
+	src: url('../fonts/saint_amour_script.eot');
+	src: url('../fonts/saint_amour_script.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/saint_amour_script.woff2') format('woff2'),
+	url('../fonts/saint_amour_script.woff') format('woff'),
+	url('../fonts/saint_amour_script.ttf') format('truetype'),
+	url('../fonts/saint_amour_script.svg#saint_amour_script') format('svg');
+}
+
+@font-face {
+	font-family: 'Patriciana';
+	src: url('../fonts/patriciana.eot');
+	src: url('../fonts/patriciana.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/patriciana.woff2') format('woff2'),
+	url('../fonts/patriciana.woff') format('woff'),
+	url('../fonts/patriciana.ttf') format('truetype'),
+	url('../fonts/patriciana.svg#patriciana') format('svg');
+}
