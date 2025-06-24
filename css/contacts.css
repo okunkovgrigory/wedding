@@ -1,7 +1,7 @@
 /* Стили */
 .wedding-contacts {
     background: linear-gradient(135deg, rgba(255, 245, 238, 0.9) 0%, rgba(255, 240, 230, 0.9) 100%);
-    padding: 0 1rem 3rem 1rem;
+    padding: 2rem 2rem;
     font-family: 'Patriciana', serif;
 }
 
@@ -16,7 +16,7 @@
     text-align: center;
     color: var(--accent);
     margin-bottom: 1.5rem;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .divider {
@@ -83,13 +83,14 @@
     font-size: 1.5rem;
     color: var(--accent);
     margin-bottom: 0.8rem;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .contact-card p {
     color: var(--text);
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .elegant-btn {

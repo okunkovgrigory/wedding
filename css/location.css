@@ -1,6 +1,6 @@
 /* Секция "Как добраться" */
 .location-section {
-    padding: 3rem 1rem;
+    padding: 2rem 2rem;
     background: linear-gradient(135deg, rgba(255, 245, 238, 0.9) 0%, rgba(255, 240, 230, 0.9) 100%);
     font-family: 'Patriciana', serif;
 }
@@ -8,6 +8,7 @@
 .section-title {
     text-align: center;
     font-size: clamp(1.7rem, 3vw, 2rem);
+    font-weight: bold;
     color: #8c5e4c;
     margin-bottom: 50px;
     font-weight: normal;
@@ -38,7 +39,7 @@
 .restaurant-name {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .restaurant-address {
@@ -66,11 +67,12 @@
     font-size: 1.3rem;
     color: #8c5e4c;
     margin-bottom: 8px;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .transport-details p {
     font-size: 1rem;
+    font-weight: bold;
     color: #555;
     margin-bottom: 10px;
 }
@@ -108,7 +110,6 @@
 
     .location-icon {
         margin-right: 0;
-        margin-bottom: 15px;
     }
 
     .transport-item {
