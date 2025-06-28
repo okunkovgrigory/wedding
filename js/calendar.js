@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // URLs
     const googleCalendarURL = "https://www.google.com/calendar/render?action=TEMPLATE&text=Свадьба+Григория+и+Оксаны&dates=20250719T080000Z/20250719T110000Z&details=С+радостью+приглашаем+вас+разделить+этот+особенный+день!&location=Ресторан+Белый+Зал";
-    const icsURL = "src/wedding.ics";
+    const icsURL = "wedding.ics";
 
     button.addEventListener('click', function (e) {
         e.preventDefault();

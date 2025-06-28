@@ -8,6 +8,7 @@
     z-index: 1;
     color: #2f2f2f;
     overflow: hidden;
+    min-height: calc(100vh - 4rem);
 }
 
 .wedding-schedule header {
@@ -17,7 +18,7 @@
 
 .wedding-schedule h2 {
     font-family: Patriciana, serif;
-    font-size: clamp(1.7rem, 3vw, 2rem);
+    font-size: clamp(1.3rem, 4vw, 2rem);
     font-weight: bold;
     color: var(--accent);
     margin-bottom: 0.5rem;
@@ -28,14 +29,31 @@
     font-size: 1rem;
 }
 
-.schedule-list {
-    list-style: none;
-    padding: 0;
+.wedding-container {
+    max-width: var(--max-width);
     margin: 0 auto;
-    width: 80vw;
+}
+
+.schedule-content {
+    display: flex;
+    justify-content: center;
+}
+
+.schedule-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    max-width: 80vw;
+    margin: 0 auto;
 }
 
 .schedule-list li {
+    flex: 1 1 80vw;
+    background: #f9f9f9;
+    text-align: left;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeUp 0.8s ease-out forwards;
@@ -49,9 +67,23 @@
     transition: background 0.3s ease;
 }
 
-.schedule-list li:hover {
-    background: rgba(255, 240, 242, 0.9);
-}
+/*.schedule-list time {*/
+/*    display: block;*/
+/*    font-weight: bold;*/
+/*    font-size: 1.1rem;*/
+/*    margin-bottom: 5px;*/
+/*    color: #444;*/
+/*}*/
+
+/*.schedule-list {*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*    margin: 0 auto;*/
+/*    width: 80vw;*/
+/*}*/
+
+/*.schedule-list li {*/
+/*}*/
 
 .schedule-list li:nth-child(1) {
     animation-delay: 0.2s;
@@ -67,14 +99,6 @@
 
 .schedule-list li:nth-child(4) {
     animation-delay: 0.8s;
-}
-
-.schedule-list li:nth-child(5) {
-    animation-delay: 1s;
-}
-
-.schedule-list li:nth-child(6) {
-    animation-delay: 1.2s;
 }
 
 time {

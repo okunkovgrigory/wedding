@@ -2,7 +2,8 @@ footer {
     background-color: var(--bg);
     color: var(--text);
     text-align: center;
-    padding: 30px 0;
+    padding: 0.6rem 0;
+    margin-top: auto;
 }
 
 .footer-content {
@@ -28,4 +29,8 @@ footer {
 
 .social-links a:hover {
     text-decoration: none !important;
+}
+
+.social-links p {
+    margin: 0;
 }
