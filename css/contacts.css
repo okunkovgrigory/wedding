@@ -4,7 +4,7 @@
     flex-direction: column;
     background: linear-gradient(135deg, rgba(255, 245, 238, 0.9) 0%, rgba(255, 240, 230, 0.9) 100%);
     padding-top: 2rem;
-    font-family: 'Patriciana', serif;
+    font-family: 'Montserrat', serif;
     min-height: calc(100vh - 4rem);
     position: relative;
 }
@@ -16,12 +16,12 @@
 }
 
 .section-title {
-    font-family: 'Patriciana', serif;
+    font-family: 'Montserrat', serif;
     font-size: clamp(1.3rem, 4vw, 2rem);
     text-align: center;
     color: var(--accent);
     margin-bottom: 1.5rem;
-    font-weight: bold;
+    font-weight: 300;
 }
 
 .contact-cards {
@@ -71,14 +71,14 @@
     font-size: 1.5rem;
     color: var(--accent);
     margin-bottom: 0.8rem;
-    font-weight: bold;
+    font-weight: 300;
 }
 
 .contact-card p {
     color: var(--text);
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    font-weight: bold;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
 }
 
 .elegant-btn {
@@ -90,6 +90,7 @@
     border-radius: 50px;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .elegant-btn i {
@@ -162,7 +163,7 @@
 
 .qr-hint {
     color: var(--text);
-    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
 }
 
 /* Адаптив */

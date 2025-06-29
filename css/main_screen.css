@@ -24,8 +24,8 @@ html {
 }
 
 body {
-    font-family: 'Patriciana', serif;
-    font-variant-ligatures: none;
+    font-family: 'Montserrat', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ body {
     background-color: white;
     align-items: center;
     position: relative;
-    font-family: 'Patriciana', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     overflow: hidden;
 }
@@ -71,7 +71,7 @@ body {
     width: 100vw;
     margin: 0 auto;
     position: relative;
-    top: calc(54vh + 60px);
+    top: calc(46vh + 4rem);
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -83,7 +83,8 @@ body {
 .time-block,
 .waiting-block {
     font-size: 12.70806pt;
-    font-family: Patriciana, serif;
+    font-family: Montserrat, serif;
+    font-weight: 300;
     color: rgb(0, 0, 0);
     line-height: 1.75em;
     letter-spacing: 0;
@@ -92,8 +93,8 @@ body {
 
 .date-block {
     font-size: 19.2774pt;
-    font-weight: bold;
-    font-family: Patriciana, serif;
+    font-weight: 300;
+    font-family: Montserrat, serif;
     color: rgb(0, 0, 0);
     line-height: inherit;
     letter-spacing: 0;
@@ -142,7 +143,7 @@ body {
 /* Основной текст таймера */
 .countdown-content {
     font-size: 10.2774pt;
-    font-family: Patriciana, serif;
+    font-family: Montserrat, serif;
     color: rgb(0, 0, 0);
     letter-spacing: 0;
     line-height: 1.75em;
@@ -154,13 +155,13 @@ body {
 
 .countdown-content span {
     align-items: center;
-    font-weight: bold;
+    font-weight: 300;
     min-width: 60px;
 }
 
 .countdown-content b {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 @media (max-width: 992px) {
@@ -181,7 +182,7 @@ body {
     .time-block,
     .waiting-block {
         font-size: clamp(0.7rem, 2.5vw, 1rem);
-        font-family: Patriciana, serif;
+        font-family: Montserrat, serif;
         color: rgb(0, 0, 0);
         line-height: 1.75em;
         letter-spacing: 0;
@@ -190,8 +191,8 @@ body {
 
     .date-block {
         font-size: clamp(0.8rem, 3.5vw, 1rem);
-        font-weight: bold;
-        font-family: Patriciana, serif;
+        font-weight: 300;
+        font-family: Montserrat, serif;
         color: rgb(0, 0, 0);
         line-height: inherit;
         letter-spacing: 0;

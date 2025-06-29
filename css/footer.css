@@ -12,14 +12,15 @@ footer {
 }
 
 .hashtag {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Montserrat';
+    font-weight: 500;
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
 .social-links {
     margin-top: 20px;
-    font-weight: bold;
+    font-weight: 300;
 }
 
 .social-links a {
