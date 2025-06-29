@@ -33,7 +33,7 @@
 .header__brand {
     color: var(--text);
     text-decoration: none !important;
-    font-size: clamp(0.875rem, 3.5vw, 1.25rem);
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
     transition: color var(--transition);
     white-space: nowrap;
     overflow: hidden;
@@ -113,7 +113,7 @@
     color: var(--text);
     text-decoration: none !important;
     padding: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
     transition: all var(--transition);
     white-space: nowrap;
 }
